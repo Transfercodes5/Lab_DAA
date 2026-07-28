@@ -8,8 +8,10 @@ for i in range(size):
     
     list.append(element)
     
-for i in range(size):
+start_time = time.perf_counter()
     
+for i in range(size):
+      
     for j in range(size-i-1):
 
         if list[j] > list[j+1]:
@@ -18,5 +20,8 @@ for i in range(size):
             list[j+1] = list[j]
             list[j] = temp
             
+end_time = time.perf_counter()
+
+print("Total time taken: ", end_time-start_time)
+            
 print(list)
-        
